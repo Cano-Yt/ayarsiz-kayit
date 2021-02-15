@@ -6,29 +6,21 @@ const ayarlar = require("../ayarlar.json");
 var prefix = ayarlar.prefix;
 
 module.exports = client => {
-  console.log(`[${moment().format("YYYY-MM-DD HH:mm:ss")}]`
-  console.log(`BIGGZ Altyapı Başlatılıyor...`)
-  console.log(
-    `Bot Aktif, Komutlar Başarıyla Yüklendi!`
-  );
-  console.log(
-    `${
-      client.user.username
-    } Ismi Ile Giriş Yapıldı!`
-  );
+  console.log(`[${moment().format("YYYY-MM-DD HH:mm:ss")}]`);
+  console.log(`• BIGGZ Altyapı Başlatılıyor...`);
+  console.log(`• Komutlar Başarıyla Yüklendi!`);
+  console.log(`• Discorda Başarıyla Bağlandı!`);
   client.user.setStatus("online"); /// ("") kısmı (online - dnd - idle) gibi değiştirilebilir.
   client.user.setActivity("OYNUYOR KISMI", { type: "WATCHING" }); //// type kısmı (WATCHING , PLAYING , LISTENING) gibi değiştirilebilir.
+  console.log(`• Oynuyor Başarıyla Ayarlandı!`);
   console.log(
-    `Oyun Ismi Ayarlandı!`
-  );
-  console.log(
-  `Şu An ` +
+    `• ` +
       client.channels.size +
-      ` Adet Kanala, ` +
+      ` Kanala, ` +
       client.guilds.size +
-      ` Adet Sunucuya ve ` +
+      ` Sunucuya ve ` +
       client.guilds.reduce((a, b) => a + b.memberCount, 0).toLocaleString() +
-      ` Kullanıcıya Hizmet Veriliyor!`)
-      console.log(`
+      ` Kullanıcıya Hizmet Veriliyor!`
   );
+  console.log(`[${moment().format("YYYY-MM-DD HH:mm:ss")}]`);
 };
