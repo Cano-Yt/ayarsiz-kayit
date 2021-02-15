@@ -8,6 +8,3 @@ Main - bot.js
 
 Motor - package.json
 
-# CODARE SUNUCUSUNA KATIL
-
-[CODARE SINIRSIZ DAVET LİNKİ](https://discord.gg/codare)
