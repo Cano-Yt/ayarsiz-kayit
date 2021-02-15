@@ -6,8 +6,8 @@ Komutlar - komutlar/komutadı.js
 
 Main - bot.js
 
-Modül Ekle/Sil - package.json
+Motor - package.json
 
 # CODARE SUNUCUSUNA KATIL
 
-[CODARE SINIRSIZ DAVET LİNKİ](https://discord.gg/8XkxXJh)
+[CODARE SINIRSIZ DAVET LİNKİ](https://discord.gg/codare)
