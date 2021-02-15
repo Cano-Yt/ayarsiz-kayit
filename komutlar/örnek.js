@@ -2,8 +2,9 @@ const Discord = require("discord.js");
 const ayarlar = require("../ayarlar.json");
 
 exports.run = (client, message, args) => {
+  /// komut kodları başı
   message.channel.send("örnek komut");
-};
+}; /// komut kodları sonu
 
 exports.conf = {
   enabled: true,
