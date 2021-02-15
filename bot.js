@@ -9,10 +9,6 @@ const db = require("quick.db");
 var önEk = ayarlar.prefix;
 var prefix = ayarlar.prefix;
 
-client.on("ready", () => {
-  console.log(`Bot suan bu isimle aktif: ${client.user.tag}!`);
-});
-
 const http = require("http");
 const express = require("express");
 const app = express();
