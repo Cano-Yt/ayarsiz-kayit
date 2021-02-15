@@ -1,10 +1,11 @@
-# BIGGZ ALTYAPI
+# BIGGZ ALTYAPI - 2019
 
-Oynuyor - events/ready.js
+• Ayarlar - ayarlar.json
 
-Komutlar - komutlar/komutadı.js
+• Oynuyor - events/ready.js
 
-Main - bot.js
+• Komutlar - komutlar/komutadı.js
 
-Motor - package.json
+• Main - bot.js
 
+• Motor - package.json

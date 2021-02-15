@@ -7,7 +7,7 @@ var prefix = ayarlar.prefix;
 
 module.exports = client => {
   console.log(`[${moment().format("YYYY-MM-DD HH:mm:ss")}]`);
-  console.log(`• BIGGZ Altyapı Başlatılıyor...`);
+  console.log(`• BIGGZ ALTYAPI Başlatılıyor...`);
   console.log(`• Komutlar Başarıyla Yüklendi!`);
   console.log(`• Discorda Başarıyla Bağlandı!`);
   client.user.setStatus("online"); /// ("") kısmı (online - dnd - idle) gibi değiştirilebilir.
