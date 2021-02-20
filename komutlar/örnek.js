@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const ayarlar = require("../ayarlar.json");
+const client = new Discord.Client();
 
 exports.run = (client, message, args) => {
   /// komut kodları başı
