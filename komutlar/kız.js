@@ -9,7 +9,8 @@ let member = message.mentions.members.first() ||message.guild.members.cache.get(
 let isim = args[1]
 let yaş = args[2]
 if(!member) return message.channel.send(`<a:x_:818861889400209419> Bir kullanıcı etiketle veya idsini gir`)
-if(!isim) return message.channel.send(`<a:x_:818861889400209419> isim girme`)
+if(!isim) return message.channel.send(`<a:x_:818861889400209419> isim girmelisin`)
+if(!yaş) return message.channel.send(`<a:x_:818861889400209419> yaş girmelisin`)
 }; 
 
 exports.conf = {
