@@ -24,7 +24,17 @@ const log = message => {
 };
 
 ///////////// KOMUTLAR BAŞ
-
+client.on("message", message => {
+  if(message.content.toLowerCase() === "tag") {
+    message.channel.send(`\`☤\``)
+  }
+})
+client.on("guildMemberAdd", member => {
+  if (member.bot) return;
+  let guild = member.guild
+  let kanal = guild.channels.cache.get("816210468670275594")
+  let süre = member.user.createdAt
+})
 ////////////// KOMUTLAR SON
 ////////////// ALTI ELLEME
 require("./util/eventLoader")(client);

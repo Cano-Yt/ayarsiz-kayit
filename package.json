@@ -21,11 +21,9 @@
   },
   "homepage": "https://github.com/An-Idiots-Guide/guidebot#readme",
   "dependencies": {
-    "discord.js": "^11.6.4",
-    "chalk": "^4.1.0",
     "moment": "^2.29.1",
-    "jimp": "^0.16.1",
-    "quick.db": "^7.1.2",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "wio.db": "^4.0.15",
+    "discord.js": "^12.5.1"
   }
 }
