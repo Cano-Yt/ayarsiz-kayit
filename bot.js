@@ -33,6 +33,7 @@ client.on("message", message => {
 client.on("guildMemberAdd", async member => {
   if (member.bot) return;
   await member.setNickname(`☤ İsim | Yaş`)
+  await member.roles.add("816210428489236500")
   let guild = member.guild
   let kanal = guild.channels.cache.get("816210468670275594")
   let süre = member.user.createdAt
@@ -51,6 +52,7 @@ client.on("guildMemberAdd", async member => {
 >**Kuruluş zamanı: **${moment(süre).format('LLLL')}
 >**Bu kullanıcı :**${koruma}
 `)
+  .setImage("https://media.discordapp.net/attachments/818786067524091933/818839756678889492/ezgif.com-gif-maker_2.gif")
   kanal.send(embed)
 })
 ////////////// KOMUTLAR SON
