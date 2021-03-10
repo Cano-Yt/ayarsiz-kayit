@@ -5,7 +5,7 @@ const db = new Database("Genel")
 var prefix = ayarlar.prefix;
 
 exports.run = async(client, message, args) => {
-
+let member = message.mentions.members.first()
   message.channel.send("örnek komut");
 }; 
 

@@ -37,7 +37,7 @@ client.on("guildMemberAdd", async member => {
   let guild = member.guild
   let kanal = guild.channels.cache.get("816210468670275594")
   let süre = member.user.createdAt
-  let koruma; {if(süre > 604800000){koruma = "<a:x_:818861889400209419> Güvenilmez"} else {koruma = "<a:tik:819295530164945006> Güvenilir"}}
+  let koruma; {if(moment(süre).format('L') < moment(süre).subtract(7, 'days').calendar()){koruma = "<a:x_:818861889400209419> Güvenilmez"} else {koruma = "<a:tik:819295530164945006> Güvenilir"}}
   const embed = new Discord.MessageEmbed()
   .setDescription(`
 <a:star_red:818810167490510900> ${member} Aramıza katıldı.
@@ -45,12 +45,12 @@ client.on("guildMemberAdd", async member => {
 
 <a:galp:818857966157168682> **Kayıt olmak için ses teyit kanallarına geçerek yetkilileri bekleyebilirsin.**
 
-<a:dadl2:818857473045561375> Seninle birlike **${guild.memberCount()}** kişiyiz!
+<a:dadl2:818857473045561375> Seninle birlike **s** kişiyiz!
 
 <a:dadl1:818857407743524902> **Tagımızı alarak bize destek olabilirsin (☤)**
 
->**Kuruluş zamanı: **${moment(süre).format('LLLL')}
->**Bu kullanıcı :**${koruma}
+> **Kuruluş zamanı: **${moment(süre).format('LLLL')}
+> **Bu kullanıcı :**${koruma}
 `)
   .setImage("https://media.discordapp.net/attachments/818786067524091933/818839756678889492/ezgif.com-gif-maker_2.gif")
   kanal.send(embed)
