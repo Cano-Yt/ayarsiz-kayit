@@ -1,12 +1,10 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const ayarlar = require("./ayarlar.json");
-const chalk = require("chalk");
 const fs = require("fs");
 const moment = require("moment");
-const Jimp = require("jimp");
-const db = require("quick.db");
-var önEk = ayarlar.prefix;
+const { Database } = require("wio.db")
+const db = new Database("Genel")
 var prefix = ayarlar.prefix;
 
 const http = require("http");
@@ -30,8 +28,6 @@ const log = message => {
 ////////////// KOMUTLAR SON
 ////////////// ALTI ELLEME
 require("./util/eventLoader")(client);
-
-client.login(ayarlar.token);
 
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
@@ -110,17 +106,5 @@ client.elevation = message => {
   return permlvl;
 };
 
-var regToken = /[\w\d]{24}\.[\w\d]{6}\.[\w\d-_]{27}/g;
-// client.on('debug', e => {
-//   console.log(chalk.bgBlue.green(e.replace(regToken, 'that was redacted')));
-// });
 
-client.on("warn", e => {
-  console.log(chalk.bgYellow(e.replace(regToken, "that was redacted")));
-});
-
-client.on("error", e => {
-  console.log(chalk.bgRed(e.replace(regToken, "that was redacted")));
-});
-
-client.login(ayarlar.token);
+client.login(process.env.token);
