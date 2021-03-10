@@ -6,9 +6,10 @@ var prefix = ayarlar.prefix;
 
 exports.run = async(client, message, args) => {
 let member = message.mentions.members.first() ||message.guild.members.cache.get(args[0])
-let isim = args.slice(1).join(" | ")
-let yaş = args.slice(2).join(" ")
-  message.channel.send("örnek komut");
+let isim = args[1]
+let yaş = args[2]
+if(!member) return message.channel.send(`<a:x_:818861889400209419> Bir kullanıcı etiketle veya idsini gir`)
+if(!isim) return message.channel.send(`<a:x_:818861889400209419> isim girme`)
 }; 
 
 exports.conf = {
