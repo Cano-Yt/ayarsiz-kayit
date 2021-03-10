@@ -25,15 +25,33 @@ const log = message => {
 
 ///////////// KOMUTLAR BAŞ
 client.on("message", message => {
+  moment.locale("tr")
   if(message.content.toLowerCase() === "tag") {
     message.channel.send(`\`☤\``)
   }
 })
-client.on("guildMemberAdd", member => {
+client.on("guildMemberAdd", async member => {
   if (member.bot) return;
+  await member.setNickname(`☤ İsim | Yaş`)
   let guild = member.guild
   let kanal = guild.channels.cache.get("816210468670275594")
   let süre = member.user.createdAt
+  let koruma; {if(süre > 604800000){koruma = "<a:x_:818861889400209419> Güvenilmez"} else {koruma = "<a:tik:819295530164945006> Güvenilir"}}
+  const embed = new Discord.MessageEmbed()
+  .setDescription(`
+<a:star_red:818810167490510900> ${member} Aramıza katıldı.
+**Hoşgeldin \`\`${member.user.username}\`\`!**
+
+<a:galp:818857966157168682> **Kayıt olmak için ses teyit kanallarına geçerek yetkilileri bekleyebilirsin.**
+
+<a:dadl2:818857473045561375> Seninle birlike **${guild.memberCount()}** kişiyiz!
+
+<a:dadl1:818857407743524902> **Tagımızı alarak bize destek olabilirsin (☤)**
+
+>**Kuruluş zamanı: **${moment(süre).format('LLLL')}
+>**Bu kullanıcı :**${koruma}
+`)
+  kanal.send(embed)
 })
 ////////////// KOMUTLAR SON
 ////////////// ALTI ELLEME
