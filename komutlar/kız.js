@@ -15,7 +15,8 @@ if(!yaş) return message.channel.send(`<a:x_:818861889400209419> yaş girmelisin
 await member.setNickname(`☤ ${isim} | ${yaş}`)
 await member.roles.add("816210418817040415")
 await member.roles.remove("816210428489236500")
-db.add(`kayıt-kız_${message.author.id}`, 1)
+await db.add(`kayıt-kız_${message.author.id}`, 1)
+await db.set(`son-kayıt_${message.author.id}`, member.id)
 const embed = new discord.MessageEmbed()
 .setTitle(`${member.username} Kayıt oldu`)
 .setDescription(`${member} Adlı kadın üyemiz başarıyla kayıt oldu <a:dans3:819172293090738187>
