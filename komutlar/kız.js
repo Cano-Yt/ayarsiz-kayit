@@ -11,6 +11,12 @@ let yaş = args[2]
 if(!member) return message.channel.send(`<a:x_:818861889400209419> Bir kullanıcı etiketle veya idsini gir`)
 if(!isim) return message.channel.send(`<a:x_:818861889400209419> isim girmelisin`)
 if(!yaş) return message.channel.send(`<a:x_:818861889400209419> yaş girmelisin`)
+await member.setNickname(`☤ ${isim} | ${yaş}`)
+await member.roles.add("")
+await member.roles.remove("")
+const embed = new discord.MessageEmbed()
+.setTitle(`${member.username} Kayıt oldu`)
+
 }; 
 
 exports.conf = {
