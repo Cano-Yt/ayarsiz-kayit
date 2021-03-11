@@ -8,10 +8,9 @@ exports.run = async(client, message, args) => {
 const embed = new discord.MessageEmbed()
 .setTitle(message.guild.name)
 .setDescription(`
-<a:galp:818857966157168682> Toplam üye: **${message.guild.members.size}
-<a:kz:818847044692213760> Toplam kadın: **${message.guild.roles.cache.get("816210418817040415").members.size}**
-<a:erkek:818847080461893673> Toplam erkek: **${message.guild.roles.cache.get("816210419638468618").members.size}**
-<a:galp3:819172396836716554> Toplam kanal: `)
+Aşşağıda erkek üyeler verilmiştir [${message.guild.roles.cache.get('816210419638468618').members.size}]
+${message.guild.roles.cache.get('816210419638468618').members.map(m => m).join("  ,  ")}`)
+message.channel.send(embed)
 }; 
 
 exports.conf = {
@@ -22,7 +21,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: "say",
+  name: "erkek-say",
   description: "Örnek açıklama.", 
   usage: ".örnek <kullanım>"
 };
