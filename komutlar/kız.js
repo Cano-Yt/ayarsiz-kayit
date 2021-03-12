@@ -9,7 +9,9 @@ exports.run = async(client, message, args) => {
 let member = message.mentions.members.first() ||message.guild.members.cache.get(args[0])
 let isim = args[1]
 let yaş = args[2]
+if(!message.member.roles.cache.has("816210424110383124")) return message.channel.send(`<a:x_:818861889400209419> Bu komutu kullanabilmek için \`${message.guild.roles.cache.get("816210424110383124").name}\` Rolüne sahip olmalısın`)
 if(!member) return message.channel.send(`<a:x_:818861889400209419> Bir kullanıcı etiketle veya idsini gir`)
+if(!member.roles.cache.has("816210428489236500")) return message.channel.send(`<a:x_:818861889400209419> Kullanıcıda \`${message.guild.roles.cache.get("816210428489236500").name}\` Rolü olması lazım`)
 if(!isim) return message.channel.send(`<a:x_:818861889400209419> isim girmelisin`)
 if(!yaş) return message.channel.send(`<a:x_:818861889400209419> yaş girmelisin`)
 await member.setNickname(`☤ ${isim} | ${yaş}`)
