@@ -9,7 +9,7 @@ const embed = new discord.MessageEmbed()
 .setTitle(message.guild.name)
 .setDescription(`
 Aşşağıda erkek üyeler verilmiştir [${message.guild.roles.cache.get('816210419638468618').members.size}]
-${message.guild.roles.cache.get('816210419638468618').members.map(m => m).join("  ,  ")}`)
+${message.guild.roles.cache.get('816210419638468618').members.map(m => m).join(", ")}`)
 message.channel.send(embed)
 }; 
 
