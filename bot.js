@@ -46,7 +46,7 @@ ${member} Aramıza katıldı.
 
 **Kayıt olmak için ses teyit kanallarına geçerek yetkilileri bekleyebilirsin.**
 
-Seninle birlike **${member.guild.members.size}** kişiyiz!
+Seninle birlike **${member.guild.members.cache.size}** kişiyiz!
 
 **Tagımızı alarak bize destek olabilirsin (${ayarlar.tag})**
 

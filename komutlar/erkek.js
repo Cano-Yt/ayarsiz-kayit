@@ -29,9 +29,7 @@ const embed2 = new discord.MessageEmbed()
 .setTitle(`${member.user.username} Kayıt oldu`)
 .setDescription(`${member} Adlı erkek üyemiz başarıyla kayıt oldu
 Kayıt eden yetkili: ${message.author}
-Yetkilinin kayıt sayısı için: \`${prefix}kayıt-sayı ${message.author.id}\`
-Yetkilinin kayıt ettiği saat: **${moment().format("LLLL")}**
-Üyenin katıldığı saat: **${db.get(`katıl-saat_${member.id}`)}**`)
+Yetkilinin kayıt sayısı için: \`${prefix}kayıt-sayı ${message.author.id}\``)
 message.guild.channels.cache.get(ayarlar.kayıtlog).send(embed2)
 await db.delete(`katıl-saat_${member.id}`)
 }; 
