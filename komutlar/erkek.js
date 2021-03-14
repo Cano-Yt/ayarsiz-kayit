@@ -15,7 +15,7 @@ if(!member.roles.cache.has("816210428489236500")) return message.channel.send(`<
 if(!isim) return message.channel.send(`<a:x_:818861889400209419> isim girmelisin`)
 if(!yaş) return message.channel.send(`<a:x_:818861889400209419> yaş girmelisin`)
 await member.setNickname(`☤ ${isim} | ${yaş}`)
-await member.roles.add("816210419638468618")
+await member.roles.add(ayarlar.erkek)
 await member.roles.remove("816210428489236500")
 await db.add(`kayıt-erkek_${message.author.id}`, 1)
 await db.set(`son-kayıt_${message.author.id}`, member.id)
