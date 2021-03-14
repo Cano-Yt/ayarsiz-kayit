@@ -8,8 +8,8 @@ exports.run = async(client, message, args) => {
 const embed = new discord.MessageEmbed()
 .setTitle(message.guild.name)
 .setDescription(`
-Aşşağıda kadın üyeler verilmiştir [${message.guild.roles.cache.get('816210418817040415').members.size}]
-${message.guild.roles.cache.get('816210418817040415').members.map(m => m).join(", ")}`)
+Aşşağıda kadın üyeler verilmiştir [${message.guild.roles.cache.get(ayarlar.kız).members.size}]
+${message.guild.roles.cache.get(ayarlar.kız).members.map(m => m).join(", ")}`)
 message.channel.send(embed)
 }; 
 
