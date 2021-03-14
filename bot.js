@@ -11,7 +11,7 @@ const http = require("http");
 const express = require("express");
 const app = express();
 app.get("/", (request, response) => {
-  console.log(Date.now() + " Ping tamamdır.");
+  console.log(moment(Date.now()).format("LLLL") + " Ping tamamdır.");
   response.sendStatus(200);
 });
 app.listen(process.env.PORT);
@@ -33,11 +33,12 @@ client.on("message", message => {
 client.on("guildMemberAdd", async member => {
   if (member.bot) return;
   await member.setNickname(`${ayarlar.tag} İsim | Yaş`)
-  await member.roles.add(ayarlar.kayıtsız)
+  await member.roles.add(ayarlar.kayıtsız)  
   let guild = member.guild
   let kanal = guild.channels.cache.get(ayarlar.kayıtkanal)
   let süre = member.user.createdAt
   let koruma; {if(moment(süre).format('L') < moment(süre).subtract(7, 'days').calendar()){koruma = "Güvenilmez"} else {koruma = "Güvenilir"}}
+  await db.set(`katıl-saat_${member.id}`, moment().format("LLLL"))
   const embed = new Discord.MessageEmbed()
   .setDescription(`
 ${member} Aramıza katıldı.
