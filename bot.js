@@ -27,7 +27,7 @@ const log = message => {
 client.on("message", message => {
   moment.locale("tr")
   if(message.content.toLowerCase() === "tag") {
-    message.channel.send(`\`☤\``)
+    message.channel.send(`\`${ayarlar.tag}\``)
   }
 })
 client.on("guildMemberAdd", async member => {

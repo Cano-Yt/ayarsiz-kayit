@@ -11,7 +11,7 @@ module.exports = client => {
   console.log(`• Komutlar Başarıyla Yüklendi!`);
   console.log(`• Discorda Başarıyla Bağlandı!`);
   client.user.setStatus("online"); /// ("") kısmı (online - dnd - idle) gibi değiştirilebilir.
-  client.user.setActivity("☤ Raurota Register", { type: "WATCHING" }); //// type kısmı (WATCHING , PLAYING , LISTENING) gibi değiştirilebilir.
+  client.user.setActivity("✮ Delinquents Register", { type: "WATCHING" }); //// type kısmı (WATCHING , PLAYING , LISTENING) gibi değiştirilebilir.
   console.log(`• Oynuyor Başarıyla Ayarlandı!`);
   console.log(`[${moment().format("YYYY-MM-DD HH:mm:ss")}]`);
 };
