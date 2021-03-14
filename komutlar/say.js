@@ -8,11 +8,11 @@ exports.run = async(client, message, args) => {
 const embed = new discord.MessageEmbed()
 .setTitle(message.guild.name)
 .setDescription(`
-<a:galp:818857966157168682> Toplam üye: **${message.guild.members.cache.size}**
-<a:kz:818847044692213760> Toplam kadın: **${message.guild.roles.cache.get(ayarlar.kız).members.size}**
-<a:erkek:818847080461893673> Toplam erkek: **${message.guild.roles.cache.get(ayarlar.erkek).members.size}**
-<a:galp3:819172396836716554> Toplam kanal: **${message.guild.channels.cache.size}**
-<a:oks:818847447132536842> Toplam bot: **${message.guild.members.cache.filter(member => member.user.bot).size}**`)
+Toplam üye: **${message.guild.members.cache.filter(m => !m.user.bot).size}**
+Toplam kadın: **${message.guild.roles.cache.get(ayarlar.kız).members.size}**
+Toplam erkek: **${message.guild.roles.cache.get(ayarlar.erkek).members.size}**
+Toplam kanal: **${message.guild.channels.cache.size}**
+Toplam bot: **${message.guild.members.cache.filter(member => member.user.bot).size}**`)
 message.channel.send(embed)
 }; 
 

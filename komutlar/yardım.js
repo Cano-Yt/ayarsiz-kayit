@@ -8,10 +8,10 @@ exports.run = async(client, message, args) => {
 const embed = new discord.MessageEmbed()
 .setTitle(message.guild.name)
 .setDescription(`
-<a:star_red:818810167490510900> Kayıt sistemi <a:star_red:818810167490510900>
+Kayıt sistemi
 \`${prefix}erkek\` \`${prefix}kadın\` \`${prefix}kayıt-sayı\`
 
-<a:star_red:818810167490510900> Normal komutlar <a:star_red:818810167490510900>
+Normal komutlar
 \`${prefix}say\` \`${prefix}erkek-say\` \`${prefix}kadın-say\` 
 `)
 message.channel.send(embed)

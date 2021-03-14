@@ -32,27 +32,26 @@ client.on("message", message => {
 })
 client.on("guildMemberAdd", async member => {
   if (member.bot) return;
-  await member.setNickname(`☤ İsim | Yaş`)
-  await member.roles.add("816210428489236500")
+  await member.setNickname(`${ayarlar.tag} İsim | Yaş`)
+  await member.roles.add(ayarlar.kayıtsız)
   let guild = member.guild
-  let kanal = guild.channels.cache.get("816210468670275594")
+  let kanal = guild.channels.cache.get(ayarlar.kayıtkanal)
   let süre = member.user.createdAt
-  let koruma; {if(moment(süre).format('L') < moment(süre).subtract(7, 'days').calendar()){koruma = "<a:x_:818861889400209419> Güvenilmez"} else {koruma = "<a:tik:819295530164945006> Güvenilir"}}
+  let koruma; {if(moment(süre).format('L') < moment(süre).subtract(7, 'days').calendar()){koruma = "Güvenilmez"} else {koruma = "Güvenilir"}}
   const embed = new Discord.MessageEmbed()
   .setDescription(`
-<a:star_red:818810167490510900> ${member} Aramıza katıldı.
+${member} Aramıza katıldı.
 **Hoşgeldin \`\`${member.user.username}\`\`!**
 
-<a:galp:818857966157168682> **Kayıt olmak için ses teyit kanallarına geçerek yetkilileri bekleyebilirsin.**
+**Kayıt olmak için ses teyit kanallarına geçerek yetkilileri bekleyebilirsin.**
 
-<a:dadl2:818857473045561375> Seninle birlike **s** kişiyiz!
+Seninle birlike **${member.guild.members.size}** kişiyiz!
 
-<a:dadl1:818857407743524902> **Tagımızı alarak bize destek olabilirsin (☤)**
+**Tagımızı alarak bize destek olabilirsin (${ayarlar.tag})**
 
 > **Kuruluş zamanı: **${moment(süre).format('LLLL')}
-> **Bu kullanıcı :**${koruma}
+> **Bu kullanıcı: **${koruma}
 `)
-  .setImage("https://media.discordapp.net/attachments/818786067524091933/818839756678889492/ezgif.com-gif-maker_2.gif")
   kanal.send(embed)
 })
 ////////////// KOMUTLAR SON
